@@ -78,10 +78,9 @@ export const ChatMessage: FC<Props> = memo(({ message, messageIndex }) => {
         console.log('-',updatedConversation)
         console.log('--',single)
         console.log('---',all)
-        console.log('----',message)
-        console.log('-----',messageContent)
-        console.log('------',selectedConversation)
-        console.log('-------',updatedMessages)
+        console.log('----',messageIndex)
+        console.log('-----',selectedConversation)
+        console.log('------',updatedMessages)
         homeDispatch({ field: 'selectedConversation', value: single });
         homeDispatch({ field: 'conversations', value: all });
         homeDispatch({
