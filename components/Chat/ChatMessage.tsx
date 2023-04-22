@@ -70,7 +70,7 @@ export const ChatMessage: FC<Props> = memo(({ message, messageIndex }) => {
             }
           })
           .filter((m) => m) as Message1[];
-
+          console.log(updatedMessages)
         const updatedConversation = {
           ...selectedConversation,
           messages: updatedMessages,
