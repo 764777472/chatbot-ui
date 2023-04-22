@@ -57,6 +57,11 @@ export const ChatMessage: FC<Props> = memo(({ message, messageIndex }) => {
 
   const handleEditMessage = () => {
     if (message.content != messageContent) {
+      type Role = 'assistant' | 'user';
+      interface Message1 {
+        role: Role;
+        content: string;
+      }
       if (selectedConversation) {
         const updatedMessages = selectedConversation.messages
           .map((m, i) => {
@@ -64,7 +69,7 @@ export const ChatMessage: FC<Props> = memo(({ message, messageIndex }) => {
               return m;
             }
           })
-          .filter((m) => m) as Message[];
+          .filter((m) => m) as Message1[];
 
         const updatedConversation = {
           ...selectedConversation,
@@ -75,11 +80,7 @@ export const ChatMessage: FC<Props> = memo(({ message, messageIndex }) => {
           updatedConversation,
           conversations,
         );
-        console.log('-',selectedConversation)
-        console.log('--',updatedMessages)
-        console.log('---',updatedConversation)
-        console.log('-----',conversations)
-        console.log('------',single, all)
+        
         homeDispatch({ field: 'selectedConversation', value: single });
         homeDispatch({ field: 'conversations', value: all });
         homeDispatch({
