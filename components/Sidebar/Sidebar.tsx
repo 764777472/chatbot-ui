@@ -107,7 +107,7 @@ const Sidebar = <T,>({
             <div className="mt-8 select-none text-center text-white opacity-50">
               <IconMistOff className="mx-auto mb-3" />
               <span className="text-[14px] leading-normal">
-                {side == 'left' ? t('No conversations.') : t('No prompts.')}
+                {side == 'left' ? t('No conversations.', { ns: 'sidebar' }) : t('No prompts.')}
               </span>
             </div>
           )}
