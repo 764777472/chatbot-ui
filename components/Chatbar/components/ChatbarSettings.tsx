@@ -1,4 +1,4 @@
-import { IconFileExport, IconMoon, IconSun } from '@tabler/icons-react';
+import { IconFileExport,IconCircleArrowRightFilled, IconMoon, IconSun } from '@tabler/icons-react';
 import { useContext } from 'react';
 
 import { useTranslation } from 'next-i18next';
@@ -30,7 +30,7 @@ export const ChatbarSettings = () => {
     handleClearConversations,
     handleImportConversations,
     handleExportData,
-
+    handleFollow,
     handleApiKeyChange,
   } = useContext(ChatbarContext);
 
@@ -59,6 +59,11 @@ export const ChatbarSettings = () => {
             value: lightMode === 'light' ? 'dark' : 'light',
           })
         }
+      />
+      <SidebarButton
+        text={t('微信公众号')}
+        icon={<IconCircleArrowRightFilled size={18} />}
+        onClick={() => handleFollow()}
       />
 
       {!serverSideApiKeyIsSet ? (

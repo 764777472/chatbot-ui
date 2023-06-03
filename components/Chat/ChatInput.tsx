@@ -374,7 +374,7 @@ export const ChatInput = ({
         </a> */}
         {/* .{' '} */}
         {t(
-          '链接不定时更新，请关注微信公众号“没想到是这样的”获取最新动态',
+          '在线去水印、AI画图，请关注微信公众号“没想到是这样的”',
         )}
         {/* {t(
           "Chatbot UI is an advanced chatbot kit for OpenAI's chat models aiming to mimic ChatGPT's interface and functionality.",

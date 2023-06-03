@@ -97,6 +97,12 @@ export const Chatbar = () => {
   const handleExportData = () => {
     exportData();
   };
+  const handleFollow = () => {
+    let ig = require('@/utils/qrcode.jpg')
+    let src = window.location.origin+ig.default.src;
+    console.log(src)
+    let newWin = window.open(src, '_blank')
+  };
 
   const handleImportConversations = (data: SupportedExportFormats) => {
     const { history, folders, prompts }: LatestExportFormat = importData(data);
@@ -212,6 +218,7 @@ export const Chatbar = () => {
         handleClearConversations,
         handleImportConversations,
         handleExportData,
+        handleFollow,
         handlePluginKeyChange,
         handleClearPluginKey,
         handleApiKeyChange,

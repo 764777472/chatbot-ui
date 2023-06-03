@@ -376,7 +376,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
             </div>
             <div className="mb-2" style={{color: "#FFF"}}>
               {t(
-                '更多动态请关注微信公众号“没想到是这样的”',
+                '在线去水印、AI画图，请关注微信公众号“没想到是这样的”',
               )}
             </div>
             {/* <div>
