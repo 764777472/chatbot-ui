@@ -1,9 +1,10 @@
-const handler = async (req: Request): Promise<Response> => {
-  const data = {
-    status: 200,
-    info: 'ok'
-  }
-  return new Response(JSON.stringify(data), { status: 200 });
-};
+import type { NextApiRequest, NextApiResponse } from 'next'
 
-export default handler;
+type Data = {
+  status: number,
+  info: string
+}
+
+export default function handler (req: NextApiRequest, res: NextApiResponse<Data>) {
+  res.status(200).json({ status: 200, info: 'ok' })
+}
